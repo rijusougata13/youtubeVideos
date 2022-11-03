@@ -20,4 +20,7 @@ class VideosList(generics.ListAPIView):
     queryset = YoutubeVideos.objects.all()
     serializer_class = VideosSerializer
     pagination_class = VideosPagination
-   
+    filter_backends = [filters.SearchFilter, DjangoFilterBackend, filters.OrderingFilter]
+    filterset_fields = ['channel_id', 'channel_title']
+    ordering = ['-published_at']
+
