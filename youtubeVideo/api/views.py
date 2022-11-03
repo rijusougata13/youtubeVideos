@@ -7,6 +7,7 @@ from .serializers import *
 
 from rest_framework import generics
 from rest_framework.pagination import CursorPagination
+from . import services
 
 # Searching with DRF and DjangoFilterBackend
 
@@ -24,3 +25,4 @@ class VideosList(generics.ListAPIView):
     filterset_fields = ['channel_id', 'channel_title']
     ordering = ['-published_at']
 
+services.THREAD.start()

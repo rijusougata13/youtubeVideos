@@ -91,7 +91,7 @@ CRON_CLASSES = [
 ]
 
 CRONJOBS=[
-    ('*/1 * * * *', 'youtubeVideo.api.cron.YoutubeCron')
+    ('* * * * *', 'youtubeVideo.api.cron.YoutubeCron','>> ~/Desktop/code/fampay/youtubeVideo/cron_job.log')
 ]
 
 # Password validation
@@ -135,7 +135,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GOOGLE_API_KEYS = ['AIzaSyDxvXZ5R0q9Ph3MgDNOJ7OGtDtcuZAIi10']
+GOOGLE_API_KEYS = ['AIzaSyA_BflqTg7p40wGKo0O-P4bW8zh3lSM6v8','AIzaSyDxvXZ5R0q9Ph3MgDNOJ7OGtDtcuZAIi10']
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',

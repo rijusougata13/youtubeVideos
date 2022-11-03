@@ -15,3 +15,4 @@ class YoutubeVideos(models.Model):
         null=True,
         blank=True,
     )
+
