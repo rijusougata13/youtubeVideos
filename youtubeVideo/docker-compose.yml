@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  server:
+    build: .
+    command: sh -c " python manage.py makemigrations &&
+              python manage.py migrate &&
+              python manage.py runserver 0.0.0.0:8000"
+    # container_name: youtube_video_api
+    # volumes:
+    #   - .:/youtube_video_api
+    ports:
+      - "8000:8000"
+  sync_service:
+    build: .
+    command: >
+      sh -c "python manage.py sync_with_youtube"
+    

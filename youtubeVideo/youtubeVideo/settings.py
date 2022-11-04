@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-plc=q^1kvfcu_lu*2_qr&a^5192h*hi8m6z2(fkj&kq#a1z!cj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django_cron',
     'django_crontab',
     'api',
+    'apiKeys',
+
 ]
 
 MIDDLEWARE = [
@@ -85,14 +87,15 @@ DATABASES = {
     }
 }
 
+DATA_UPLOAD_MAX_NUMBER_FIELDS=100000
 
-CRON_CLASSES = [
-    "api.cron.YoutubeCron",
-]
+# CRON_CLASSES = [
+#     "api.cron.YoutubeCron",
+# ]
 
-CRONJOBS=[
-    ('* * * * *', 'youtubeVideo.api.cron.YoutubeCron','>> ~/Desktop/code/fampay/youtubeVideo/cron_job.log')
-]
+# CRONJOBS=[
+#     ('* * * * *', 'youtubeVideo.api.cron.YoutubeCron','>> ~/Desktop/code/fampay/youtubeVideo/cron_job.log')
+# ]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -135,7 +138,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GOOGLE_API_KEYS = ['AIzaSyA_BflqTg7p40wGKo0O-P4bW8zh3lSM6v8','AIzaSyDxvXZ5R0q9Ph3MgDNOJ7OGtDtcuZAIi10']
+GOOGLE_API_KEYS = ['AIzaSyA_BflqTg7p40wGKo0O-P4bW8zh3lSM6v8','AIzaSyA1m0zWCS41OIXNpbYpARPkO2KmupeoFcg']
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
