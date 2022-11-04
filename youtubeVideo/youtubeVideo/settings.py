@@ -138,7 +138,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GOOGLE_API_KEYS = ['AIzaSyA_BflqTg7p40wGKo0O-P4bW8zh3lSM6v8','AIzaSyA1m0zWCS41OIXNpbYpARPkO2KmupeoFcg']
+GOOGLE_API_KEYS = ['AIzaSyDHXRzgvT8xyc7di2-3SZrhOMRusEzJ3ko','AIzaSyA1m0zWCS41OIXNpbYpARPkO2KmupeoFcg']
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
