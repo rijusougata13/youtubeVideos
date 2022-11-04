@@ -12,6 +12,8 @@
 # Feature
 - Support Django-admin panel 
 - Pagination supported
+- Filter, Optimize search support
+- Specific dashboard for all the features at /api
 - Handle Multiple api key if any of them expired
 - easily run with docker
 - optimized codebase
@@ -36,6 +38,7 @@
  - Setup YouTube data v3 API: [https://developers.google.com/youtube/v3/getting-started](https://developers.google.com/youtube/v3/getting-started)
  - Setup Search API reference: [https://developers.google.com/youtube/v3/docs/search/list](https://developers.google.com/youtube/v3/docs/search/list)
  - After setting up your localserver create super user to access admin panel in <base_url>/admin
- - View video list in <base_url>/videos
- - to go to next page <base_url>/videos?page=<page_num>
+ - View video dashboard in <base_url>/api
+
+ 
 

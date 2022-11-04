@@ -20,7 +20,7 @@ from api import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('videos/', include('api.urls'))
-    # path('api/',views.VideosList.as_view()),
+    path('videos/', include('api.urls')), 
+    path('api/',views.YoutubeItems.as_view()),
 ]
 

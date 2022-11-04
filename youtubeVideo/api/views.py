@@ -6,12 +6,31 @@ from django.core.paginator import Paginator, EmptyPage
 from django.forms import model_to_dict
 from django.http import JsonResponse
 from .models import *
-
+from .serializers import *
 from api.models import Video
 
 from rest_framework import generics
 from rest_framework.pagination import CursorPagination
 
+
+
+
+class ResultsPagination(CursorPagination):
+    page_size = 25
+    page_size_query_param = 'page_size'
+    max_page_size = 100
+
+# Searching is implemented using DRF Filters
+# DRF filter by default uses [icontains] and thus the search by default supports partial searches
+
+class YoutubeItems(generics.ListAPIView):
+    search_fields = ['title', 'description']
+    filter_backends = (filters.SearchFilter,DjangoFilterBackend,filters.OrderingFilter)
+    filterset_fields = ['yt_id','title']
+    ordering = ('-published_at')
+    queryset = Video.objects.all()
+    serializer_class = VideosSerializer
+    pagination_class = ResultsPagination
 
 
 def get_videos(request):
