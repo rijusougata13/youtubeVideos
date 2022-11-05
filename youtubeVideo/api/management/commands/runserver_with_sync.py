@@ -3,7 +3,6 @@ import os
 from apiKeys.models import ApiKey
 from django.core.management import call_command
 from django.core.management.commands.runserver import Command as BaseCommand
-import environ
 from youtubeVideo import settings
 
 loop = asyncio.get_event_loop()
