@@ -21,10 +21,11 @@
 # Run Locally:
    - Setup YouTube data v3 API: [https://developers.google.com/youtube/v3/getting-started](https://developers.google.com/youtube/v3/getting-started)
    - Setup Search API reference: [https://developers.google.com/youtube/v3/docs/search/list](https://developers.google.com/youtube/v3/docs/search/list)
-   - put api keys under settings.py in GOOGLE_API_KEYS field
+   - put api keys under settings.py in GOOGLE_API_KEYS field ( We can retrive it from .env but for current use you can put it in settings.py)
+   
 * ## Using Docker - 
    **Make sure you have docker and docker-compose installed. If not, refer: https://docs.docker.com/install/**
-   - Put env keys in GOOGLE_API_KEY in settings.py
+
    - cd youtubeVideo
    - Run `docker-compose up --build` 
    - go to `http://localhost:8000/videos/` to access all the videos in order
